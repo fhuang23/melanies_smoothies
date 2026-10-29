@@ -1,0 +1,23 @@
+definition_version: 2
+entities:
+  melanies_smoothies:
+    type: streamlit
+    meta:
+      use_mixins:
+        - streamlit_shared
+    identifier:
+      name: MZR68E2V_4OLRL46
+      database: SMOOTHIES
+      schema: PUBLIC
+mixins:
+  streamlit_shared:
+    artifacts:
+      - pyproject.toml
+      - smoothie_name.py
+      - .streamlit/config.toml
+    title: Custom_Smoothie_Order_Form
+    query_warehouse: SNOWFLAKE_LEARNING_WH
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    meta:
+      role: ACCOUNTADMIN
+    main_file: smoothie_name.py
